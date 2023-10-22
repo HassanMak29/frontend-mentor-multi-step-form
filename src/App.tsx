@@ -1,37 +1,29 @@
-import { useState } from "react";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
-import "./App.css";
+import AddOns from "./components/AddOns";
+import Finish from "./components/Finish";
+import PersonalInfo from "./components/PersonalInfo";
+import SelectPlan from "./components/SelectPlan";
+import SideBar from "./components/SideBar";
+import ThankYou from "./components/ThankYou";
+import { useStepsContext } from "./context/useStepsContext";
+import { FormData } from "./types";
 
 function App() {
-  const [count, setCount] = useState(0);
+  const { stepIndex, formData, updateFormData } = useStepsContext();
+
+  const updateFields = (fields: Partial<FormData>) =>
+    updateFormData({ ...formData, ...fields });
 
   return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+    <main className="relative flex h-screen w-full items-center justify-center bg-Magnolia font-ubunto">
+      <div className="flex h-screen w-full flex-col bg-Magnolia shadow-sm md:flex md:h-[600px] md:w-[800px] md:flex-row md:rounded-2xl md:bg-white md:p-4">
+        <SideBar />
+        {stepIndex === 0 && <PersonalInfo updateFields={updateFields} />}
+        {stepIndex === 1 && <SelectPlan updateFields={updateFields} />}
+        {stepIndex === 2 && <AddOns updateFields={updateFields} />}
+        {stepIndex === 3 && <Finish />}
+        {stepIndex === 4 && <ThankYou />}
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button
-          className="bg-blue-500"
-          onClick={() => setCount((count) => count + 1)}
-        >
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
+    </main>
   );
 }
 
