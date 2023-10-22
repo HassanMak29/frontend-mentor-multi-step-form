@@ -40,7 +40,7 @@ export default function StepsContextProvider({
   const updateFormData = (data: FormData) => {
     setFormData(data);
   };
-  console.log("formData", formData);
+
   const valuesObject = {
     stepIndex,
     steps,
