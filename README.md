@@ -21,8 +21,8 @@ This is a solution to the [Multi-step form challenge on Frontend Mentor](https:/
 
 ### Links
 
-- Solution URL: [Solution URL](https://github.com/HassanMak29/frontend-mentor-loopside-landing-page)
-- Live Site URL: [Live site URL](https://frontend-mentor-loopstudios-landing.netlify.app/)
+- Solution URL: [Solution URL](https://github.com/HassanMak29/frontend-mentor-multi-step-form)
+- Live Site URL: [Live site URL](https://frontend-mentor-multi-step-hassan.netlify.app/)
 
 ### Built with
 
