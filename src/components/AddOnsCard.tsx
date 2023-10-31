@@ -1,13 +1,13 @@
 import { UseFormRegister } from "react-hook-form";
 import { ADD_ONS_PRICES } from "../Consts";
 import { useStepsContext } from "../context/useStepsContext";
-import { CycleType, Values } from "../types";
+import { Values } from "../types";
 
-type Selected = {
+interface Selected {
   "online-service": boolean;
   "larger-storage": boolean;
   "customizable-profile": boolean;
-};
+}
 
 export default function AddOnsCard({
   id,
@@ -54,7 +54,7 @@ export default function AddOnsCard({
           <span className="text-sm text-CoolGray">{description}</span>
         </div>
         <span className="text-sm text-PurplishBlue">{`+$${
-          ADD_ONS_PRICES[id][cycle as CycleType]
+          ADD_ONS_PRICES[id][cycle]
         }/${cycle === "yearly" ? "yr" : "mo"}`}</span>
       </div>
     </label>

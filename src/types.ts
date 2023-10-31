@@ -5,7 +5,7 @@ export type AddOnsType =
   | "larger-storage"
   | "customizable-profile";
 
-export type FormData = {
+export interface FormData {
   name: string;
   email: string;
   phone: string;
@@ -14,15 +14,15 @@ export type FormData = {
   "online-service": boolean;
   "larger-storage": boolean;
   "customizable-profile": boolean;
-};
+}
 
-export type Values = {
+export interface Values {
   name: string;
   email: string;
   phone: string;
   plan: PlanType;
-  cycle: CycleType;
+  cycle: boolean;
   "online-service": boolean;
   "larger-storage": boolean;
   "customizable-profile": boolean;
-};
+}

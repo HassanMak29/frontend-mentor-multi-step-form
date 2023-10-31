@@ -22,11 +22,11 @@ export default function PlanCard({
       `}
       htmlFor={id}
     >
-      <img src={PLAN_DATA[id]["icon"]} width={38} />
+      <img src={PLAN_DATA[id].icon} width={38} />
       <div className="mt-auto">
         <h3 className="font-semibold capitalize text-MarineBlue">{id}</h3>
         <span className="block text-CoolGray">{`$${
-          PLAN_DATA[id]["price"][cycle]
+          PLAN_DATA[id].price[cycle]
         }/${cycle === "monthly" ? "mo" : "yr"}`}</span>
         {cycle !== "monthly" && (
           <span className="block text-sm text-MarineBlue">2 months free</span>
