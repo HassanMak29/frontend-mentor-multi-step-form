@@ -79,7 +79,7 @@ export default function SelectPlan({
             className="hidden"
             {...register("cycle", {
               value: formData.cycle,
-              onChange: (e) => {
+              onChange: (e: React.ChangeEvent<HTMLInputElement>) => {
                 setCycle(e.target.checked ? "yearly" : "monthly");
               },
             })}

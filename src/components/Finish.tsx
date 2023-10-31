@@ -10,7 +10,7 @@ export default function Finish() {
 
   const plan: PlanType = formData.plan || Object.keys(PLAN_DATA)[0];
   const cycle: CycleType = formData.cycle;
-  const price = PLAN_DATA[plan]["price"][cycle];
+  const price = PLAN_DATA[plan].price[cycle];
 
   const { handleSubmit } = useForm<Partial<Values>>();
   const { stepIndex, next } = useStepsContext();

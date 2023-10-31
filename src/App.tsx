@@ -23,6 +23,28 @@ function App() {
         {stepIndex === 3 && <Finish />}
         {stepIndex === 4 && <ThankYou />}
       </div>
+
+      <div className="absolute bottom-5 hidden md:block">
+        Challenge by &nbsp;
+        <a
+          href="https://www.frontendmentor.io?ref=challenge"
+          target="_blank"
+          rel="noreferrer"
+          className="text-blue-800 hover:text-blue-600"
+        >
+          Frontend Mentor
+        </a>
+        . &nbsp;Coded by &nbsp;
+        <a
+          href="https://www.makhloufi.me"
+          target="_blank"
+          rel="noreferrer"
+          className="text-blue-800 hover:text-blue-600"
+        >
+          Abdelmounaim H. Makhloufi
+        </a>
+        .
+      </div>
     </main>
   );
 }
