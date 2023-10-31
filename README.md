@@ -1,6 +1,6 @@
-# Frontend Mentor - Loopstudios landing page solution
+# Frontend Mentor - Multi-step form solution
 
-This is a solution to the [Loopstudios landing page challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/loopstudios-landing-page-N88J5Onjw).
+This is a solution to the [Multi-step form challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/multistep-form-YVAnSdqQBJ/hub).
 
 ## Table of contents
 
