@@ -38,8 +38,8 @@ export default function SelectPlan({
         subTitle={"You have the option of monthly or yearly billing."}
       />
 
-      <form className="flex flex-col gap-6">
-        <div className="flex flex-col justify-between gap-3 md:flex-row md:gap-0">
+      <form className="flex max-h-[50vh] flex-col gap-6 overflow-auto">
+        <div className="flex flex-col justify-between gap-3  md:flex-row md:gap-0">
           <PlanCard
             id={PLAN_DATA.arcade.name}
             plan={plan}

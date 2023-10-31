@@ -16,7 +16,11 @@ export default function Finish() {
   const { stepIndex, next } = useStepsContext();
 
   const onSubmit: SubmitHandler<Partial<Values>> = () => {
-    next();
+    if (!formData.name || !formData.email || !formData.phone) {
+      goTo(0);
+    } else {
+      next();
+    }
   };
 
   const totalToPay =
