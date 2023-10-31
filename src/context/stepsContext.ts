@@ -9,8 +9,8 @@ export default createContext({
   stepIndex: 0,
   steps: steps,
   formData: {} as FormData,
-  next: () => null,
-  back: () => null,
-  goTo: (_index: number) => null,
-  updateFormData: (_obj: FormData) => null,
+  next: () => undefined,
+  back: () => undefined,
+  goTo: (_index: number) => undefined,
+  updateFormData: (_obj: FormData) => undefined,
 });
